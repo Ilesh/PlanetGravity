@@ -10,71 +10,102 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
-    @IBOutlet var sceneView: ARSCNView!
+class ViewController: UIViewController {
+    
+    @IBOutlet var resetTimerButton: UIButton!
+    @IBOutlet var pauseButton: UIButton!
+    @IBOutlet var addButton: UIButton!
+    
+    var planetView: PlanetView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
-        sceneView.delegate = self
+        PlanetMaterial.loadTextures()
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        load()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func load() {
+        planetView = PlanetView(frame: view.frame)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        planetView.setup(vc: self)
+        view.addSubview(planetView)
+        
+        view.sendSubview(toBack: planetView)
+        
+        UIViewController.vc = self
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        planetView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+    }
+    
+    func enableControls() {
+        resetTimerButton.isEnabled = true
+        pauseButton.isEnabled = true
+        addButton.isEnabled = true
+        UIViewController.drawerViewController?.scaleTextLabel.isHidden = false
+    }
+    
+    func reset() {
+        for node in planetView.planetScene.rootNode.childNodes {
+            if node.geometry is SCNSphere || node.geometry is SCNTorus || node.geometry is SCNPlane {
+                node.removeFromParentNode()
+            }
+        }
+        
+        resetTimerButton.isEnabled = false
+        addButton.isEnabled = false 
+        pauseButton.isEnabled = false
+        planetView.floorNode = nil
+        planetView.highlightedNode = nil
+        planetView.planetNode = nil
+        planetView.planetScene.scale = 1
+        planetView.planetScene.planetSystem = nil
+        
+        UIViewController.pulleyViewController?.setDrawerPosition(position: .collapsed, animated: true, completion: { (v) in
+            UIViewController.pulleyViewController?.setNeedsSupportedDrawerPositionsUpdate()
+        })
+    }
+    
+    @IBAction func addPlanet(_ sender: UIButton) {
+        switch planetView.state {
+        case .planet(let node):
+            planetView.planetScene.createMoon(planetNode: node)
+        case .sun:
+            fallthrough
+        case .none:
+            planetView.planetScene.createPlanet()
+        }
+    }
+    
+    @IBAction func togglePause(_ sender: UIButton) {
+        planetView.togglePause()
+        
+        if sender.currentTitle == "pause" {
+            sender.setImage(#imageLiteral(resourceName: "icons8-circled-play-50"), for: .normal)
+            sender.setTitle("play", for: .normal)
+        } else {
+            sender.setImage(#imageLiteral(resourceName: "icons8-pause-button-50"), for: .normal)
+            sender.setTitle("pause", for: .normal)
+        }
+    }
+    
+    @IBAction func resetTimers(_ sender: UIButton) {
+        planetView.resetTimers()
+    }
+    
+}
 
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
     }
 }

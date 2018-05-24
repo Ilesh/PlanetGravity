@@ -22,8 +22,13 @@ class PlanetGravityTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let sun = PlanetNode(mass: 1.9891e30, radius: 695500000)
+        let earth = OrbitingPlanet(target: sun, mass: 5.97219e24, radius: 6378100, distance: 149600000000
+, rotationPeriod: 24)
+        
+        print(earth.vEscape)
+        print(earth.g)
+        print(earth.revolutionPeriod)
     }
     
     func testPerformanceExample() {

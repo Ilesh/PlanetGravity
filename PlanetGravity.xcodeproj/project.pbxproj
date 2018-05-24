@@ -7,8 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4310B83820ABB4EC008DF0C8 /* spherical.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B83720ABB4EC008DF0C8 /* spherical.jpg */; };
+		4310B83A20AF8F28008DF0C8 /* PlanetSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310B83920AF8F28008DF0C8 /* PlanetSystem.swift */; };
+		4310B83C20AF9694008DF0C8 /* SCNVector3+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310B83B20AF9694008DF0C8 /* SCNVector3+Math.swift */; };
+		4310B84520AFAC87008DF0C8 /* planet3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B83F20AFAC86008DF0C8 /* planet3.jpg */; };
+		4310B84620AFAC87008DF0C8 /* planet5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84020AFAC86008DF0C8 /* planet5.jpg */; };
+		4310B84720AFAC87008DF0C8 /* planet2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84120AFAC86008DF0C8 /* planet2.jpg */; };
+		4310B84820AFAC87008DF0C8 /* planet6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84220AFAC86008DF0C8 /* planet6.jpg */; };
+		4310B84920AFAC87008DF0C8 /* planet1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84320AFAC86008DF0C8 /* planet1.jpg */; };
+		4310B84A20AFAC87008DF0C8 /* planet4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84420AFAC87008DF0C8 /* planet4.jpg */; };
+		4310B84F20AFAC8D008DF0C8 /* moon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84B20AFAC8C008DF0C8 /* moon4.jpg */; };
+		4310B85020AFAC8D008DF0C8 /* moon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84C20AFAC8D008DF0C8 /* moon1.jpg */; };
+		4310B85120AFAC8D008DF0C8 /* moon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84D20AFAC8D008DF0C8 /* moon2.jpg */; };
+		4310B85220AFAC8D008DF0C8 /* moon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4310B84E20AFAC8D008DF0C8 /* moon3.jpg */; };
+		4310B85B20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310B85A20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift */; };
+		4364CFAE20B49AB9009FD16C /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364CFAB20B49AB8009FD16C /* PulleyViewController.swift */; };
+		4364CFAF20B49AB9009FD16C /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364CFAC20B49AB8009FD16C /* UIView+constrainToParent.swift */; };
+		4364CFB020B49AB9009FD16C /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364CFAD20B49AB8009FD16C /* PulleyPassthroughScrollView.swift */; };
+		4364CFB220B49D9D009FD16C /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4364CFB120B49D9D009FD16C /* DrawerViewController.swift */; };
+		4364CFB620B4C1D0009FD16C /* floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4364CFB520B4C1CF009FD16C /* floor.jpg */; };
+		4364CFBC20B4CF24009FD16C /* center2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4364CFBB20B4CF24009FD16C /* center2.jpg */; };
+		4364CFBE20B4CF80009FD16C /* center.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4364CFBD20B4CF80009FD16C /* center.jpg */; };
+		4370255F20AB9F8300C6BD96 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370255E20AB9F8300C6BD96 /* PlanetScene.swift */; };
+		4370256320ABAC5900C6BD96 /* PlanetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370256220ABAC5900C6BD96 /* PlanetNode.swift */; };
+		4370256520ABAF5C00C6BD96 /* PlanetMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370256420ABAF5C00C6BD96 /* PlanetMaterial.swift */; };
 		43CA187D20AB6D2100413C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA187C20AB6D2100413C12 /* AppDelegate.swift */; };
-		43CA187F20AB6D2100413C12 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CA187E20AB6D2100413C12 /* art.scnassets */; };
 		43CA188120AB6D2100413C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA188020AB6D2100413C12 /* ViewController.swift */; };
 		43CA188420AB6D2100413C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA188220AB6D2100413C12 /* Main.storyboard */; };
 		43CA188620AB6D2500413C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CA188520AB6D2500413C12 /* Assets.xcassets */; };
@@ -27,9 +50,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4310B83720ABB4EC008DF0C8 /* spherical.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spherical.jpg; sourceTree = "<group>"; };
+		4310B83920AF8F28008DF0C8 /* PlanetSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSystem.swift; sourceTree = "<group>"; };
+		4310B83B20AF9694008DF0C8 /* SCNVector3+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Math.swift"; sourceTree = "<group>"; };
+		4310B83F20AFAC86008DF0C8 /* planet3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet3.jpg; sourceTree = "<group>"; };
+		4310B84020AFAC86008DF0C8 /* planet5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet5.jpg; sourceTree = "<group>"; };
+		4310B84120AFAC86008DF0C8 /* planet2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet2.jpg; sourceTree = "<group>"; };
+		4310B84220AFAC86008DF0C8 /* planet6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet6.jpg; sourceTree = "<group>"; };
+		4310B84320AFAC86008DF0C8 /* planet1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet1.jpg; sourceTree = "<group>"; };
+		4310B84420AFAC87008DF0C8 /* planet4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planet4.jpg; sourceTree = "<group>"; };
+		4310B84B20AFAC8C008DF0C8 /* moon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon4.jpg; sourceTree = "<group>"; };
+		4310B84C20AFAC8D008DF0C8 /* moon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon1.jpg; sourceTree = "<group>"; };
+		4310B84D20AFAC8D008DF0C8 /* moon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon2.jpg; sourceTree = "<group>"; };
+		4310B84E20AFAC8D008DF0C8 /* moon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon3.jpg; sourceTree = "<group>"; };
+		4310B85A20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Animate.swift"; sourceTree = "<group>"; };
+		4364CFAB20B49AB8009FD16C /* PulleyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
+		4364CFAC20B49AB8009FD16C /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		4364CFAD20B49AB8009FD16C /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		4364CFB120B49D9D009FD16C /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		4364CFB520B4C1CF009FD16C /* floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floor.jpg; path = ../../../../Desktop/floor.jpg; sourceTree = "<group>"; };
+		4364CFBB20B4CF24009FD16C /* center2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = center2.jpg; sourceTree = "<group>"; };
+		4364CFBD20B4CF80009FD16C /* center.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = center.jpg; sourceTree = "<group>"; };
+		4370255E20AB9F8300C6BD96 /* PlanetScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetScene.swift; sourceTree = "<group>"; };
+		4370256220ABAC5900C6BD96 /* PlanetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetNode.swift; sourceTree = "<group>"; };
+		4370256420ABAF5C00C6BD96 /* PlanetMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetMaterial.swift; sourceTree = "<group>"; };
 		43CA187920AB6D2100413C12 /* PlanetGravity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetGravity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CA187C20AB6D2100413C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43CA187E20AB6D2100413C12 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		43CA188020AB6D2100413C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43CA188320AB6D2100413C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43CA188520AB6D2500413C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,30 +104,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4310B85920AFB8AD008DF0C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4364CFBB20B4CF24009FD16C /* center2.jpg */,
+				4364CFBD20B4CF80009FD16C /* center.jpg */,
+				4310B83720ABB4EC008DF0C8 /* spherical.jpg */,
+				4310B84C20AFAC8D008DF0C8 /* moon1.jpg */,
+				4310B84D20AFAC8D008DF0C8 /* moon2.jpg */,
+				4310B84E20AFAC8D008DF0C8 /* moon3.jpg */,
+				4310B84B20AFAC8C008DF0C8 /* moon4.jpg */,
+				4310B84320AFAC86008DF0C8 /* planet1.jpg */,
+				4364CFB520B4C1CF009FD16C /* floor.jpg */,
+				4310B84120AFAC86008DF0C8 /* planet2.jpg */,
+				4310B83F20AFAC86008DF0C8 /* planet3.jpg */,
+				4310B84420AFAC87008DF0C8 /* planet4.jpg */,
+				4310B84020AFAC86008DF0C8 /* planet5.jpg */,
+				4310B84220AFAC86008DF0C8 /* planet6.jpg */,
+			);
+			name = Resources;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4364CFB320B49DAC009FD16C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4364CFAD20B49AB8009FD16C /* PulleyPassthroughScrollView.swift */,
+				4364CFAB20B49AB8009FD16C /* PulleyViewController.swift */,
+				4364CFAC20B49AB8009FD16C /* UIView+constrainToParent.swift */,
+				4310B83B20AF9694008DF0C8 /* SCNVector3+Math.swift */,
+				4310B85A20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4364CFB420B49DC5009FD16C /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				4370256420ABAF5C00C6BD96 /* PlanetMaterial.swift */,
+				4370255E20AB9F8300C6BD96 /* PlanetScene.swift */,
+				4370256220ABAC5900C6BD96 /* PlanetNode.swift */,
+				4310B83920AF8F28008DF0C8 /* PlanetSystem.swift */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
 		43CA187020AB6D2100413C12 = {
 			isa = PBXGroup;
 			children = (
 				43CA187B20AB6D2100413C12 /* PlanetGravity */,
 				43CA189220AB6D2600413C12 /* PlanetGravityTests */,
-				43CA187A20AB6D2100413C12 /* Products */,
+				43CA187A20AB6D2100413C12 /* z */,
 			);
 			sourceTree = "<group>";
 		};
-		43CA187A20AB6D2100413C12 /* Products */ = {
+		43CA187A20AB6D2100413C12 /* z */ = {
 			isa = PBXGroup;
 			children = (
 				43CA187920AB6D2100413C12 /* PlanetGravity.app */,
 				43CA188F20AB6D2600413C12 /* PlanetGravityTests.xctest */,
 			);
-			name = Products;
+			name = z;
 			sourceTree = "<group>";
 		};
 		43CA187B20AB6D2100413C12 /* PlanetGravity */ = {
 			isa = PBXGroup;
 			children = (
+				4310B85920AFB8AD008DF0C8 /* Resources */,
+				4364CFB320B49DAC009FD16C /* Extensions */,
+				4364CFB420B49DC5009FD16C /* Planets */,
 				43CA187C20AB6D2100413C12 /* AppDelegate.swift */,
-				43CA187E20AB6D2100413C12 /* art.scnassets */,
 				43CA188020AB6D2100413C12 /* ViewController.swift */,
+				4364CFB120B49D9D009FD16C /* DrawerViewController.swift */,
 				43CA188220AB6D2100413C12 /* Main.storyboard */,
 				43CA188520AB6D2500413C12 /* Assets.xcassets */,
 				43CA188720AB6D2500413C12 /* LaunchScreen.storyboard */,
@@ -165,7 +259,7 @@
 				Base,
 			);
 			mainGroup = 43CA187020AB6D2100413C12;
-			productRefGroup = 43CA187A20AB6D2100413C12 /* Products */;
+			productRefGroup = 43CA187A20AB6D2100413C12 /* z */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -180,10 +274,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CA187F20AB6D2100413C12 /* art.scnassets in Resources */,
+				4310B84720AFAC87008DF0C8 /* planet2.jpg in Resources */,
+				4310B84920AFAC87008DF0C8 /* planet1.jpg in Resources */,
 				43CA188920AB6D2500413C12 /* LaunchScreen.storyboard in Resources */,
+				4310B83820ABB4EC008DF0C8 /* spherical.jpg in Resources */,
+				4310B84F20AFAC8D008DF0C8 /* moon4.jpg in Resources */,
+				4310B84A20AFAC87008DF0C8 /* planet4.jpg in Resources */,
+				4310B84620AFAC87008DF0C8 /* planet5.jpg in Resources */,
+				4310B85020AFAC8D008DF0C8 /* moon1.jpg in Resources */,
+				4364CFBE20B4CF80009FD16C /* center.jpg in Resources */,
+				4364CFB620B4C1D0009FD16C /* floor.jpg in Resources */,
+				4310B84820AFAC87008DF0C8 /* planet6.jpg in Resources */,
 				43CA188620AB6D2500413C12 /* Assets.xcassets in Resources */,
+				4310B85220AFAC8D008DF0C8 /* moon3.jpg in Resources */,
+				4364CFBC20B4CF24009FD16C /* center2.jpg in Resources */,
+				4310B85120AFAC8D008DF0C8 /* moon2.jpg in Resources */,
 				43CA188420AB6D2100413C12 /* Main.storyboard in Resources */,
+				4310B84520AFAC87008DF0C8 /* planet3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4370256520ABAF5C00C6BD96 /* PlanetMaterial.swift in Sources */,
+				4364CFAF20B49AB9009FD16C /* UIView+constrainToParent.swift in Sources */,
+				4310B83A20AF8F28008DF0C8 /* PlanetSystem.swift in Sources */,
+				4364CFB020B49AB9009FD16C /* PulleyPassthroughScrollView.swift in Sources */,
+				4364CFAE20B49AB9009FD16C /* PulleyViewController.swift in Sources */,
+				4364CFB220B49D9D009FD16C /* DrawerViewController.swift in Sources */,
+				4370256320ABAC5900C6BD96 /* PlanetNode.swift in Sources */,
+				4310B85B20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift in Sources */,
 				43CA188120AB6D2100413C12 /* ViewController.swift in Sources */,
+				4310B83C20AF9694008DF0C8 /* SCNVector3+Math.swift in Sources */,
+				4370255F20AB9F8300C6BD96 /* PlanetScene.swift in Sources */,
 				43CA187D20AB6D2100413C12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

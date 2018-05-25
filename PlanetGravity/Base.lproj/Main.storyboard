@@ -56,8 +56,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn7-mE-r8v">
                                 <rect key="frame" x="323" y="50" width="44" height="136"/>
                                 <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h42-SX-9Sa">
+                                        <rect key="frame" x="-5" y="-4" width="54" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Qdu-E2-hM8">
+                                            <rect key="frame" x="0.0" y="0.0" width="54" height="144"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="dark"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U06-gi-3ib">
-                                        <rect key="frame" x="7" y="10" width="32" height="32"/>
+                                        <rect key="frame" x="6" y="10" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="mMW-Ga-RUP"/>
                                             <constraint firstAttribute="width" constant="32" id="yob-XU-vgd"/>
@@ -95,7 +109,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="fAc-Vb-hMK" firstAttribute="centerX" secondItem="Pn7-mE-r8v" secondAttribute="centerX" id="4hM-gC-dlV"/>
                                     <constraint firstItem="fAc-Vb-hMK" firstAttribute="top" secondItem="Tj5-zT-032" secondAttribute="bottom" constant="10" id="C71-iB-Lyj"/>
@@ -118,6 +131,7 @@
                             <constraint firstItem="Pn7-mE-r8v" firstAttribute="top" secondItem="mkb-qd-Yqi" secondAttribute="top" constant="50" id="AHA-yE-1NX"/>
                             <constraint firstAttribute="trailing" secondItem="Pn7-mE-r8v" secondAttribute="trailing" constant="8" id="HRe-u8-bA3"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EMe-gd-Jth"/>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="fAc-Vb-hMK" id="eKq-Rr-SjM"/>
@@ -217,6 +231,7 @@
                             <constraint firstItem="ZHd-yK-eAT" firstAttribute="top" secondItem="7bd-7Y-9b0" secondAttribute="top" constant="10" id="cMq-vZ-z2X"/>
                             <constraint firstItem="ZHd-yK-eAT" firstAttribute="centerX" secondItem="7bd-7Y-9b0" secondAttribute="centerX" id="xfx-G9-6Bi"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="jhH-5p-Hd4"/>
                     </view>
                     <connections>
                         <outlet property="scaleSlider" destination="CxA-bi-nKx" id="3HZ-E9-ViH"/>

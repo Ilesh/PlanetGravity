@@ -46,7 +46,8 @@ class DrawerViewController: UIViewController, PulleyDrawerViewControllerDelegate
         let speed = sender.value
         scene.speed = CGFloat(sender.maximumValue + sender.minimumValue) - CGFloat(speed)
         
-        print(scene.speed)
+        scene.sceneView.planetNode?.applyActions()
+        
         scene.planetSystem?.planets.forEach({ (planet) in
             planet.applyActions()
         })

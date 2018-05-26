@@ -27,6 +27,10 @@ extension Planet {
     var actualRadius: CGFloat {
         return radius / (0.05 / 6.3e6)
     }
+    
+    var vEscape: CGFloat {
+        return sqrt((2 * 6.674e-11 * actualMass) / actualRadius)
+    }
 }
 
 struct StaticPlanet: Planet {
@@ -67,12 +71,12 @@ struct OrbitingPlanet: Planet {
         return 68 * g * (1 / 4.4482216)
     }
     
-    var g: CGFloat {
-        return (6.674e-11 * actualMass) / pow(actualRadius, 2)
+    var forceOfGravity: CGFloat {
+        return 2
     }
     
-    var vEscape: CGFloat {
-        return sqrt((2 * 6.674e-11 * actualMass) / actualDistance)
+    var g: CGFloat {
+        return (6.674e-11 * actualMass) / pow(actualRadius, 2)
     }
     
 }

@@ -33,7 +33,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4sL-T6-2tL"/>
                     </view>
                     <connections>
@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-bi-nKx">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.05" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-bi-nKx">
                                 <rect key="frame" x="14" y="90" width="347" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,8 +174,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SvT-DI-45p">
-                                <rect key="frame" x="14" y="166" width="347" height="30"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.05" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SvT-DI-45p">
+                                <rect key="frame" x="14" y="188" width="347" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,21 +184,8 @@
                                     <action selector="speedSlider:" destination="fBY-RX-Rms" eventType="valueChanged" id="M5C-ll-MZi"/>
                                 </connections>
                             </slider>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHd-yK-eAT">
-                                <rect key="frame" x="169" y="10" width="36" height="5"/>
-                                <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="mHE-JM-LuX"/>
-                                    <constraint firstAttribute="width" constant="36" id="rhf-ps-7Xs"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qs-WL-ssQ">
-                                <rect key="frame" x="16" y="137" width="59" height="24"/>
+                                <rect key="frame" x="16" y="156" width="333" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,7 +197,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljc-M4-APg">
-                                <rect key="frame" x="103" y="222" width="168" height="40"/>
+                                <rect key="frame" x="103" y="226" width="168" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -226,17 +213,73 @@
                                     <action selector="deleteSystem:" destination="fBY-RX-Rms" eventType="touchUpInside" id="PuY-nz-ZpE"/>
                                 </connections>
                             </button>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-ao-LhZ">
+                                <rect key="frame" x="67" y="33" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Mass"/>
+                                    <segment title="Distance"/>
+                                    <segment title="Radius"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="changeSliderType:" destination="fBY-RX-Rms" eventType="valueChanged" id="mnY-Dm-fOP"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-OT-rfk">
+                                <rect key="frame" x="16" y="74" width="343" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-px-r2k" customClass="FormulaLabel" customModule="PlanetGravity" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-4" width="343" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-ZP-Scz">
+                                <rect key="frame" x="16" y="121" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pageSwitch:" destination="fBY-RX-Rms" eventType="valueChanged" id="CAp-Bm-M1C"/>
+                                </connections>
+                            </pageControl>
+                            <view userInteractionEnabled="NO" tag="69" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-RL-MXZ">
+                                <rect key="frame" x="169.66666666666666" y="11" width="36" height="5"/>
+                                <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="QLA-QU-mxP"/>
+                                    <constraint firstAttribute="height" constant="5" id="vrg-qG-7mG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ZHd-yK-eAT" firstAttribute="top" secondItem="7bd-7Y-9b0" secondAttribute="top" constant="10" id="cMq-vZ-z2X"/>
-                            <constraint firstItem="ZHd-yK-eAT" firstAttribute="centerX" secondItem="7bd-7Y-9b0" secondAttribute="centerX" id="xfx-G9-6Bi"/>
+                            <constraint firstAttribute="top" secondItem="LWo-RL-MXZ" secondAttribute="top" constant="-11" id="5DN-yq-8RG"/>
+                            <constraint firstItem="LWo-RL-MXZ" firstAttribute="centerX" secondItem="jhH-5p-Hd4" secondAttribute="centerX" id="Gtf-Hn-68d"/>
+                            <constraint firstAttribute="bottom" secondItem="LWo-RL-MXZ" secondAttribute="bottom" priority="750" constant="8" id="XDS-ji-Ow3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jhH-5p-Hd4"/>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="Ljc-M4-APg" id="s1Q-lb-7h2"/>
+                        <outlet property="formulaLabel" destination="2YA-px-r2k" id="9dd-zE-FZH"/>
+                        <outlet property="formulaViewBackground" destination="lAV-OT-rfk" id="t0m-Eg-9KT"/>
+                        <outlet property="pageController" destination="yPh-ZP-Scz" id="TsY-PN-tLL"/>
                         <outlet property="scaleSlider" destination="CxA-bi-nKx" id="3HZ-E9-ViH"/>
                         <outlet property="scaleTextLabel" destination="dCh-BH-v5p" id="OxM-1R-WYM"/>
+                        <outlet property="sliderSelector" destination="4eX-ao-LhZ" id="SmN-bu-Ucg"/>
                         <outlet property="speedSlider" destination="SvT-DI-45p" id="EJh-3y-bQU"/>
+                        <outlet property="speedTextLabel" destination="6Qs-WL-ssQ" id="eG6-IL-c4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfr-dg-GEa" userLabel="First Responder" sceneMemberID="firstResponder"/>

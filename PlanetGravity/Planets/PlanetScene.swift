@@ -151,15 +151,13 @@ class PlanetView: ARSCNView, ARSCNViewDelegate, UIGestureRecognizerDelegate {
     func select(node: SCNNode, rev: Bool = false) {
         
         if let pulleyVC = UIViewController.pulleyViewController {
-            if let newDrawer = UIViewController.loadVC(with: "drawer") as? DrawerViewController {
-                if pulleyVC.drawerPosition == .partiallyRevealed || rev {
-                    pulleyVC.setDrawerPosition(position: .collapsed, animated: true) { (v) in
-                        pulleyVC.setDrawerContentViewController(controller: newDrawer)
-                        pulleyVC.setDrawerPosition(position: .partiallyRevealed, animated: true)
-                    }
-                } else {
-                    pulleyVC.setDrawerContentViewController(controller: newDrawer)
+            if pulleyVC.drawerPosition == .partiallyRevealed || rev {
+                pulleyVC.setDrawerPosition(position: .collapsed, animated: true) { (v) in
+                    UIViewController.drawerViewController?.planetNode = node as? PlanetNode
+                    pulleyVC.setDrawerPosition(position: .partiallyRevealed, animated: true)
                 }
+            } else {
+                UIViewController.drawerViewController?.planetNode = node as? PlanetNode
             }
         }
         
@@ -174,12 +172,14 @@ class PlanetView: ARSCNView, ARSCNViewDelegate, UIGestureRecognizerDelegate {
     }
     
     func unselect(funct: (() -> ())? = nil) {
+        UIViewController.drawerViewController?.planetNode = nil
+        
         if let mat = highlightedNode?.geometry?.firstMaterial {
             
             if let pulleyVC = UIViewController.pulleyViewController {
-                if let newDrawer = UIViewController.loadVC(with: "drawer") as? DrawerViewController, UIViewController.pulleyViewController!.drawerPosition != PulleyPosition.collapsed {
+                if UIViewController.pulleyViewController!.drawerPosition != PulleyPosition.collapsed {
                     pulleyVC.setDrawerPosition(position: .collapsed, animated: true) { (v) in
-                        pulleyVC.setDrawerContentViewController(controller: newDrawer)
+                        UIViewController.drawerViewController?.planetNode = nil 
                         if let f = funct {
                             f()
                         }
@@ -341,6 +341,24 @@ class PlanetScene: SCNScene, UIGestureRecognizerDelegate {
         }
         
         return nil
+    }
+    
+    func removePlanet(planet: PlanetNode?) {
+        guard let planet = planet else {
+            return
+        }
+        
+        if planet == sceneView.planetNode {
+            UIViewController.drawerViewController?.deleteSystem()
+            return 
+        }
+        
+        if let index = planetSystem?.planets.index(of: planet) {
+            planetSystem?.planets.remove(at: index)
+        }
+        
+        planet.removeFromParentNode()
+        planet.orbitNode?.removeFromParentNode()
     }
     
     func recalculateSpeeds() {

@@ -1,0 +1,6 @@
+framework module Pods_PlanetGravity {
+  umbrella header "Pods-PlanetGravity-umbrella.h"
+
+  export *
+  module * { export * }
+}

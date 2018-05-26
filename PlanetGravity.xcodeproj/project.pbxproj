@@ -31,12 +31,14 @@
 		4370255F20AB9F8300C6BD96 /* PlanetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370255E20AB9F8300C6BD96 /* PlanetScene.swift */; };
 		4370256320ABAC5900C6BD96 /* PlanetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370256220ABAC5900C6BD96 /* PlanetNode.swift */; };
 		4370256520ABAF5C00C6BD96 /* PlanetMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370256420ABAF5C00C6BD96 /* PlanetMaterial.swift */; };
+		4382D79C20B8418D000C06FA /* FormulaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4382D79B20B8418D000C06FA /* FormulaLabel.swift */; };
 		43CA187D20AB6D2100413C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA187C20AB6D2100413C12 /* AppDelegate.swift */; };
 		43CA188120AB6D2100413C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA188020AB6D2100413C12 /* ViewController.swift */; };
 		43CA188420AB6D2100413C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA188220AB6D2100413C12 /* Main.storyboard */; };
 		43CA188620AB6D2500413C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CA188520AB6D2500413C12 /* Assets.xcassets */; };
 		43CA188920AB6D2500413C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CA188720AB6D2500413C12 /* LaunchScreen.storyboard */; };
 		43CA189420AB6D2600413C12 /* PlanetGravityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA189320AB6D2600413C12 /* PlanetGravityTests.swift */; };
+		9C2B38549FE6E1A31DA632D1 /* Pods_PlanetGravity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E231F199386BE7AC8FEFE5 /* Pods_PlanetGravity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D0AFCD707781F022DE1959 /* Pods-PlanetGravity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetGravity.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetGravity/Pods-PlanetGravity.release.xcconfig"; sourceTree = "<group>"; };
+		331F224E0E6DC75D0C395F81 /* Pods-PlanetGravity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetGravity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetGravity/Pods-PlanetGravity.debug.xcconfig"; sourceTree = "<group>"; };
 		4310B83720ABB4EC008DF0C8 /* spherical.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spherical.jpg; sourceTree = "<group>"; };
 		4310B83920AF8F28008DF0C8 /* PlanetSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSystem.swift; sourceTree = "<group>"; };
 		4310B83B20AF9694008DF0C8 /* SCNVector3+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Math.swift"; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		4370255E20AB9F8300C6BD96 /* PlanetScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetScene.swift; sourceTree = "<group>"; };
 		4370256220ABAC5900C6BD96 /* PlanetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetNode.swift; sourceTree = "<group>"; };
 		4370256420ABAF5C00C6BD96 /* PlanetMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetMaterial.swift; sourceTree = "<group>"; };
+		4382D79B20B8418D000C06FA /* FormulaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaLabel.swift; sourceTree = "<group>"; };
 		43CA187920AB6D2100413C12 /* PlanetGravity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetGravity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CA187C20AB6D2100413C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43CA188020AB6D2100413C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 		43CA188F20AB6D2600413C12 /* PlanetGravityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetGravityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CA189320AB6D2600413C12 /* PlanetGravityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetGravityTests.swift; sourceTree = "<group>"; };
 		43CA189520AB6D2600413C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E231F199386BE7AC8FEFE5 /* Pods_PlanetGravity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanetGravity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2B38549FE6E1A31DA632D1 /* Pods_PlanetGravity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A08C438280F39D2B0A5567C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E231F199386BE7AC8FEFE5 /* Pods_PlanetGravity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4310B85920AFB8AD008DF0C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +170,8 @@
 				43CA187B20AB6D2100413C12 /* PlanetGravity */,
 				43CA189220AB6D2600413C12 /* PlanetGravityTests */,
 				43CA187A20AB6D2100413C12 /* z */,
+				AE083E5EDBEC5222CCB534E7 /* Pods */,
+				0A08C438280F39D2B0A5567C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +197,7 @@
 				43CA188520AB6D2500413C12 /* Assets.xcassets */,
 				43CA188720AB6D2500413C12 /* LaunchScreen.storyboard */,
 				43CA188A20AB6D2500413C12 /* Info.plist */,
+				4382D79B20B8418D000C06FA /* FormulaLabel.swift */,
 			);
 			path = PlanetGravity;
 			sourceTree = "<group>";
@@ -193,6 +211,15 @@
 			path = PlanetGravityTests;
 			sourceTree = "<group>";
 		};
+		AE083E5EDBEC5222CCB534E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				331F224E0E6DC75D0C395F81 /* Pods-PlanetGravity.debug.xcconfig */,
+				09D0AFCD707781F022DE1959 /* Pods-PlanetGravity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43CA189820AB6D2600413C12 /* Build configuration list for PBXNativeTarget "PlanetGravity" */;
 			buildPhases = (
+				89D7CC351855B4DAAF586677 /* [CP] Check Pods Manifest.lock */,
 				43CA187520AB6D2100413C12 /* Sources */,
 				43CA187620AB6D2100413C12 /* Frameworks */,
 				43CA187720AB6D2100413C12 /* Resources */,
+				9B28809D3EBBC92E8D47F82F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +332,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89D7CC351855B4DAAF586677 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlanetGravity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B28809D3EBBC92E8D47F82F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PlanetGravity/Pods-PlanetGravity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/iosMath/iosMath.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iosMath.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlanetGravity/Pods-PlanetGravity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43CA187520AB6D2100413C12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -317,6 +385,7 @@
 				4370256320ABAC5900C6BD96 /* PlanetNode.swift in Sources */,
 				4310B85B20B1ACF0008DF0C8 /* UIBezierPath+Animate.swift in Sources */,
 				43CA188120AB6D2100413C12 /* ViewController.swift in Sources */,
+				4382D79C20B8418D000C06FA /* FormulaLabel.swift in Sources */,
 				4310B83C20AF9694008DF0C8 /* SCNVector3+Math.swift in Sources */,
 				4370255F20AB9F8300C6BD96 /* PlanetScene.swift in Sources */,
 				43CA187D20AB6D2100413C12 /* AppDelegate.swift in Sources */,
@@ -477,6 +546,7 @@
 		};
 		43CA189920AB6D2600413C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 331F224E0E6DC75D0C395F81 /* Pods-PlanetGravity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +565,7 @@
 		};
 		43CA189A20AB6D2600413C12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D0AFCD707781F022DE1959 /* Pods-PlanetGravity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

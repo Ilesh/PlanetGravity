@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         resetTimerButton.isEnabled = true
         pauseButton.isEnabled = true
         addButton.isEnabled = true
-        UIViewController.drawerViewController?.scaleTextLabel.isHidden = false
     }
     
     func reset() {

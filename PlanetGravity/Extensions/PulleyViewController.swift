@@ -1029,6 +1029,19 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
             return
         }
         
+        func getSubviewsOfView(v:UIView) -> [UIView] {
+            var viewArray = [UIView]()
+            
+            for subview in v.subviews {
+                if subview.tag != 69 {
+                    viewArray.append(subview)
+                }
+                viewArray += getSubviewsOfView(v: subview)
+            }
+            
+            return viewArray
+        }
+        
         drawerPosition = position
         
         var collapsedHeight:CGFloat = kPulleyDefaultCollapsedHeight
@@ -1047,8 +1060,20 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
         case .collapsed:
             stopToMoveTo = collapsedHeight
             
+            getSubviewsOfView(v: drawerContentViewController.view).forEach { (view) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    view.alpha = 0
+                })
+            }
+            
         case .partiallyRevealed:
             stopToMoveTo = partialRevealHeight
+            
+            getSubviewsOfView(v: drawerContentViewController.view).forEach { (view) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    view.alpha = 1
+                })
+            }
             
         case .open:
             stopToMoveTo = (self.drawerScrollView.bounds.height)
@@ -1104,18 +1129,6 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
 
             completion?(true)
         }
-    }
-    
-    /**
-     Set the drawer position, by default the change will be animated. Deprecated. Recommend switching to the other setDrawerPosition method, this one will be removed in a future release.
-     
-     - parameter position: The position to set the drawer to.
-     - parameter isAnimated: Whether or not to animate the change. Default: true
-     */
-    @available(*, deprecated)
-    public func setDrawerPosition(position: PulleyPosition, isAnimated: Bool = true)
-    {
-        setDrawerPosition(position: position, animated: isAnimated)
     }
     
     /**

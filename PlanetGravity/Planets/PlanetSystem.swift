@@ -31,6 +31,10 @@ extension Planet {
     var vEscape: CGFloat {
         return sqrt((2 * 6.674e-11 * actualMass) / actualRadius)
     }
+    
+    var g: CGFloat {
+        return (6.674e-11 * actualMass) / pow(actualRadius, 2)
+    }
 }
 
 struct StaticPlanet: Planet {
@@ -50,8 +54,7 @@ struct OrbitingPlanet: Planet {
     var eccentricity: CGFloat
     
     var actualDistance: CGFloat {
-        // return pow(distance * 25, 2) * 1e9
-        return distance / (0.49 / 149.6e9)
+        return distance * (149.6e7 / 0.49)
     }
     
     var actualRotationPeriod: CGFloat {
@@ -63,7 +66,7 @@ struct OrbitingPlanet: Planet {
     }
     
     var actualRevolutionPeriod: CGFloat {
-        let period = 2 * CGFloat.pi * sqrt(pow(actualDistance, 3) / (target.planet.actualMass * 6.67e-11))
+        let period = 2 * CGFloat.pi * sqrt(pow(actualDistance, 3) / (actualMass * 6.67e-11))
         return period * (1 / (3600 * 24))
     }
     
@@ -72,11 +75,7 @@ struct OrbitingPlanet: Planet {
     }
     
     var forceOfGravity: CGFloat {
-        return 2
-    }
-    
-    var g: CGFloat {
-        return (6.674e-11 * actualMass) / pow(actualRadius, 2)
+        return (6.674e-11 * actualMass * target.planet.actualMass) / pow(actualDistance, 2)
     }
     
 }

@@ -19,10 +19,10 @@ enum FormulaVariable: String {
 
 enum Formula: String {
     
-    case vEscape = "\\bf{ v_{esc} = \\sqrt{ \\frac{2 G m} {r} } = \\sqrt{ \\frac{2 G mm} {rr} } = ? \\text m/s}"
-    case fg = "\\bf{ F_g = \\sqrt{ \\frac{ G M m }{r^2} } = \\sqrt{ \\frac{ G MM mm }{(rr)^2} } = ? \\text N }"
-    case g = "\\bf { g_p = \\sqrt{ \\frac{ G m }{r^2} } = \\sqrt{ \\frac{ G mm }{(rr)^2} } = ? \\text m/s^2 }"
-    case revolutionPeriod = "\\bf { T_{rev} = 2 \\pi \\sqrt{ \\frac{ R^2 }{M G} } = 2 \\pi \\sqrt{ \\frac{ (RR)^2 }{MM G} } = ? \\text days } "
+    case vEscape = "\\bf{ v_{esc} = \\sqrt{ \\frac{2 G M_p} {r} } = \\sqrt{ \\frac{2 G (mm)} {rr} } = ? \\text m/s}"
+    case g = "\\bf { g_p = \\frac{ G M_p }{r^2} = \\frac{ G (mm) }{(rr)^2} = ? \\text m/s^2 }"
+    case fg = "\\bf{ F_g = \\frac{ G M_s M_p }{R^2} = \\frac{ G (MM) (mm) }{(RR)^2} = ? \\text N }"
+    case revolutionPeriod = "\\bf { T_{rev} = 2 \\pi \\sqrt{ \\frac{ R^2 }{ G M_p } } = 2 \\pi \\sqrt{ \\frac{ (RR)^2 }{(mm) G}} = ? \\text days } "
 
 }
 
@@ -47,10 +47,7 @@ class FormulaLabel: MTMathUILabel {
                 }
                 return ""
             case .g:
-                if let orb = orbitingPlanet {
-                    return format(value: orb.g)
-                }
-                return ""
+                return format(value: planet.planet.g)
             case .revolutionPeriod:
                 if let orb = orbitingPlanet {
                     return format(value: orb.actualRevolutionPeriod)
@@ -63,27 +60,35 @@ class FormulaLabel: MTMathUILabel {
     
     var formula: Formula? = nil {
         didSet {
-            if let newFormula = formula {
-                var runningNumber = newFormula.rawValue
-                
-                runningNumber = fill(runningNumber, variable: .G, with: 6.67e-11)
-                
-                if let targetMass = targetPlanetNode?.planet.actualMass {
-                    runningNumber = fill(runningNumber, variable: .M, with: targetMass)
-                }
-                if let mass = planetNode?.planet.mass {
-                    runningNumber = fill(runningNumber, variable: .m, with: mass)
-                }
-                if let radiusDistance = orbitingPlanet?.actualDistance {
-                    runningNumber = fill(runningNumber, variable: .R, with: radiusDistance)
-                }
-                if let actualRadius = planetNode?.planet.actualRadius {
-                    runningNumber = fill(runningNumber, variable: .r, with: actualRadius)
-                }
-                                
-                latex = "\(runningNumber.replacingOccurrences(of: "?", with: finialAnswer))"
+            if let _ = formula {
+                reloadEquation()
             }
         }
+    }
+    
+    func reloadEquation() {
+        guard let formula = formula else {
+            return
+        }
+        
+        var runningNumber = formula.rawValue
+        
+        runningNumber = fill(runningNumber, variable: .G, with: 6.67e-11)
+        
+        if let targetMass = targetPlanetNode?.planet.actualMass {
+            runningNumber = fill(runningNumber, variable: .M, with: targetMass)
+        }
+        if let mass = planetNode?.planet.actualMass {
+            runningNumber = fill(runningNumber, variable: .m, with: mass)
+        }
+        if let radiusDistance = orbitingPlanet?.actualDistance {
+            runningNumber = fill(runningNumber, variable: .R, with: radiusDistance)
+        }
+        if let actualRadius = planetNode?.planet.actualRadius {
+            runningNumber = fill(runningNumber, variable: .r, with: actualRadius)
+        }
+        
+        latex = "\(runningNumber.replacingOccurrences(of: "?", with: finialAnswer))"
     }
 
     func fill(_ prev: String, variable: FormulaVariable, with value: CGFloat) -> String {

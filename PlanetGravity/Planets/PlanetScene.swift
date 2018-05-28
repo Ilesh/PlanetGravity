@@ -29,11 +29,11 @@ class PlanetView: ARSCNView, ARSCNViewDelegate, UIGestureRecognizerDelegate {
             return .none
         }
         
-        if let selected = highlightedNode {
+        if let selected = highlightedNode, let planetValue = selected as? PlanetNode {
             if selected == planetNode {
-                return .sun(selected as! PlanetNode)
+                return .sun(planetValue)
             }
-            return .planet(selected as! PlanetNode)
+            return .planet(planetValue)
         }
         return .none
     }
@@ -281,14 +281,14 @@ class PlanetScene: SCNScene, UIGestureRecognizerDelegate {
         UIViewController.vc.enableControls()
     }
     
-    func createPlanet() {
+    func createPlanet() {        
         guard let position = sceneView.pointOfView?.position, let system = planetSystem else {
             return
         }
         
         let planetPosition = SCNVector3(x: position.x, y: system.centerPlanet.position.y, z: position.z)
         let distance = system.centerPlanet.position.dis(planetPosition)
-        let planetNode = PlanetNode(distance: distance, orbiting: system.centerPlanet, radius: 0.05, mass: 5e24, rotationPeriod: 30, eccentricity: 1.0)
+        let planetNode = PlanetNode(distance: distance, orbiting: system.centerPlanet, radius: 0.05, mass: 5e24, rotationPeriod: 30, eccentricity: distance)
         let orbitNode = createOrbit(distance: distance)
         
         addNode(orbitNode, to: (planetNode.planet as! OrbitingPlanet).target)
@@ -307,7 +307,7 @@ class PlanetScene: SCNScene, UIGestureRecognizerDelegate {
         }
         
         let distance: CGFloat = 0.1
-        let moonNode = PlanetNode(distance: distance, orbiting: orbitPlanet, radius: 0.005, mass: 5e24, rotationPeriod: 30, eccentricity: 1.0)
+        let moonNode = PlanetNode(distance: distance, orbiting: orbitPlanet, radius: 0.005, mass: 7.34767e22, rotationPeriod: 30, eccentricity: distance)
         let orbitNode = SCNNode()
         
         addNode(orbitNode, to: planetNode)

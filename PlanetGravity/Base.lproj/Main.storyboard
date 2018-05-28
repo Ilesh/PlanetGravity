@@ -54,13 +54,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn7-mE-r8v">
-                                <rect key="frame" x="323" y="50" width="44" height="136"/>
+                                <rect key="frame" x="323" y="50" width="44" height="92"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h42-SX-9Sa">
-                                        <rect key="frame" x="-5" y="-4" width="54" height="144"/>
+                                        <rect key="frame" x="-5" y="-4" width="54" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Qdu-E2-hM8">
-                                            <rect key="frame" x="0.0" y="0.0" width="54" height="144"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="54" height="100"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                         <blurEffect style="dark"/>
@@ -70,38 +70,24 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </visualEffectView>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U06-gi-3ib">
-                                        <rect key="frame" x="6" y="10" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="mMW-Ga-RUP"/>
-                                            <constraint firstAttribute="width" constant="32" id="yob-XU-vgd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="00" image="icons8-synchronize-50">
-                                            <color key="titleColor" red="0.20392156862745098" green="0.47058823529411764" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="resetTimers:" destination="LCm-Lc-feZ" eventType="touchUpInside" id="JKu-cb-N6i"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj5-zT-032">
-                                        <rect key="frame" x="6.3333333333333144" y="52" width="32" height="32"/>
+                                        <rect key="frame" x="6.3333333333333144" y="8" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="CxN-ng-cOA"/>
                                             <constraint firstAttribute="width" constant="32" id="Pne-8N-P41"/>
                                         </constraints>
-                                        <state key="normal" title="pause" image="icons8-pause-button-50"/>
+                                        <state key="normal" title="pause" image="icons8-pause-button-50 (1)"/>
                                         <connections>
                                             <action selector="togglePause:" destination="LCm-Lc-feZ" eventType="touchUpInside" id="b6E-4v-kaO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-Vb-hMK">
-                                        <rect key="frame" x="6.3333333333333144" y="94" width="32" height="32"/>
+                                        <rect key="frame" x="6.3333333333333144" y="50" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="Ca3-Ws-ich"/>
                                             <constraint firstAttribute="height" constant="32" id="YeK-Fm-nnD"/>
                                         </constraints>
-                                        <state key="normal" image="icons8-plus-50">
+                                        <state key="normal" image="icons8-plus-50 (1)">
                                             <color key="titleColor" red="0.20392156859999999" green="0.47058823529999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -114,10 +100,8 @@
                                     <constraint firstItem="fAc-Vb-hMK" firstAttribute="top" secondItem="Tj5-zT-032" secondAttribute="bottom" constant="10" id="C71-iB-Lyj"/>
                                     <constraint firstAttribute="width" constant="44" id="DvG-2y-j9l"/>
                                     <constraint firstAttribute="bottom" secondItem="fAc-Vb-hMK" secondAttribute="bottom" constant="10" id="QVX-Xd-yYu"/>
-                                    <constraint firstItem="U06-gi-3ib" firstAttribute="centerX" secondItem="Pn7-mE-r8v" secondAttribute="centerX" id="XKk-8q-hbd"/>
+                                    <constraint firstItem="Tj5-zT-032" firstAttribute="top" secondItem="Pn7-mE-r8v" secondAttribute="top" constant="8" id="Y8d-E2-m7R"/>
                                     <constraint firstItem="Tj5-zT-032" firstAttribute="centerX" secondItem="Pn7-mE-r8v" secondAttribute="centerX" id="Zfo-E5-4au"/>
-                                    <constraint firstItem="Tj5-zT-032" firstAttribute="top" secondItem="U06-gi-3ib" secondAttribute="bottom" constant="10" id="amh-Ap-Gme"/>
-                                    <constraint firstItem="U06-gi-3ib" firstAttribute="top" secondItem="Pn7-mE-r8v" secondAttribute="top" constant="10" id="hcv-WQ-1f7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -136,7 +120,6 @@
                     <connections>
                         <outlet property="addButton" destination="fAc-Vb-hMK" id="eKq-Rr-SjM"/>
                         <outlet property="pauseButton" destination="Tj5-zT-032" id="G1Y-KZ-Zbj"/>
-                        <outlet property="resetTimerButton" destination="U06-gi-3ib" id="EOc-QR-ddN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNN-O4-rgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +225,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-ZP-Scz">
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-ZP-Scz">
                                 <rect key="frame" x="16" y="121" width="343" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -289,8 +272,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-pause-button-50" width="50" height="50"/>
-        <image name="icons8-plus-50" width="50" height="50"/>
-        <image name="icons8-synchronize-50" width="50" height="50"/>
+        <image name="icons8-pause-button-50 (1)" width="50" height="50"/>
+        <image name="icons8-plus-50 (1)" width="50" height="50"/>
     </resources>
 </document>

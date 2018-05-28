@@ -12,7 +12,6 @@ import ARKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var resetTimerButton: UIButton!
     @IBOutlet var pauseButton: UIButton!
     @IBOutlet var addButton: UIButton!
     
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
     }
     
     func enableControls() {
-        resetTimerButton.isEnabled = true
         pauseButton.isEnabled = true
         addButton.isEnabled = true
     }
@@ -54,7 +52,6 @@ class ViewController: UIViewController {
             }
         }
         
-        resetTimerButton.isEnabled = false
         addButton.isEnabled = false 
         pauseButton.isEnabled = false
         planetView.floorNode = nil
@@ -83,16 +80,12 @@ class ViewController: UIViewController {
         planetView.togglePause()
         
         if sender.currentTitle == "pause" {
-            sender.setImage(#imageLiteral(resourceName: "icons8-circled-play-50"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "icons8-circled-play-50 (1)"), for: .normal)
             sender.setTitle("play", for: .normal)
         } else {
-            sender.setImage(#imageLiteral(resourceName: "icons8-pause-button-50"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "icons8-pause-button-50 (1)"), for: .normal)
             sender.setTitle("pause", for: .normal)
         }
-    }
-    
-    @IBAction func resetTimers(_ sender: UIButton) {
-        planetView.resetTimers()
     }
     
 }

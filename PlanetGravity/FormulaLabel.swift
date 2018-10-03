@@ -22,7 +22,7 @@ enum Formula: String {
     case vEscape = "\\bf{ v_{esc} = \\sqrt{ \\frac{2 G M_p} {r} } = \\sqrt{ \\frac{2 G (mm)} {rr} } = ? \\text m/s}"
     case g = "\\bf { g_p = \\frac{ G M_p }{r^2} = \\frac{ G (mm) }{(rr)^2} = ? \\text m/s^2 }"
     case fg = "\\bf{ F_g = \\frac{ G M_s M_p }{R^2} = \\frac{ G (MM) (mm) }{(RR)^2} = ? \\text N }"
-    case revolutionPeriod = "\\bf { T_{rev} = 2 \\pi \\sqrt{ \\frac{ R^2 }{ G M_p } } = 2 \\pi \\sqrt{ \\frac{ (RR)^2 }{(mm) G}} = ? \\text days } "
+    case revolutionPeriod = "\\bf { T_{rev} = 2 \\pi \\sqrt{ \\frac{ R^3 }{ G M_s } } = 2 \\pi \\sqrt{ \\frac{ (RR)^3 }{(MM) G}} = ? \\text days } "
 
 }
 

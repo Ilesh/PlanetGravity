@@ -54,7 +54,7 @@ struct OrbitingPlanet: Planet {
     var eccentricity: CGFloat
     
     var actualDistance: CGFloat {
-        return distance * (149.6e7 / 0.49)
+        return distance * (149.6e9 / 0.49)
     }
     
     var actualRotationPeriod: CGFloat {
@@ -66,7 +66,7 @@ struct OrbitingPlanet: Planet {
     }
     
     var actualRevolutionPeriod: CGFloat {
-        let period = 2 * CGFloat.pi * sqrt(pow(actualDistance, 3) / (actualMass * 6.67e-11))
+        let period = 2 * CGFloat.pi * sqrt(pow(actualDistance, 3) / (target.planet.actualMass * 6.67e-11))
         return period * (1 / (3600 * 24))
     }
     

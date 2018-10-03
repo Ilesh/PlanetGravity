@@ -36,7 +36,7 @@ class PlanetMaterial {
         moons = (1...4).map {
             return materialForName("moon\($0).jpg")
         }
-        floor = materialForName("floor.jpg")
+
         centerPlanet = materialForName("center.jpg")
     }
         

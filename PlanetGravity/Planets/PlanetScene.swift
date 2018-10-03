@@ -289,6 +289,7 @@ class PlanetScene: SCNScene, UIGestureRecognizerDelegate {
         let planetPosition = SCNVector3(x: position.x, y: system.centerPlanet.position.y, z: position.z)
         let distance = system.centerPlanet.position.dis(planetPosition)
         let planetNode = PlanetNode(distance: distance, orbiting: system.centerPlanet, radius: 0.05, mass: 5e24, rotationPeriod: 30, eccentricity: distance)
+        print("\(distance)")
         let orbitNode = createOrbit(distance: distance)
         
         addNode(orbitNode, to: (planetNode.planet as! OrbitingPlanet).target)
@@ -330,7 +331,6 @@ class PlanetScene: SCNScene, UIGestureRecognizerDelegate {
     func createFloor(anchor: ARPlaneAnchor) -> SCNNode? {
         if sceneView.planetNode == nil {
             let floor = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
-            floor.firstMaterial = PlanetMaterial.floor
             floor.cornerRadius = (floor.width / 2) * 0.5
             
             let floorNode = SCNNode(geometry: floor)
